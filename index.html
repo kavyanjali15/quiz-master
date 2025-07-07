@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Quiz Application</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1 class="title">QUIZ MASTER</h1>
+
+
+        <!-- Login Section -->
+         <div id="auth-section" class="auth-card">
+            
+    <div class="form-header">
+        <h2>Login to Your Account</h2>
+    </div>
+    <form id="login-form" class="auth-form">
+        <input type="text" name="username" placeholder="Username" required>
+        
+        <input type="password" name="password" placeholder="Password" required>
+      
+        <button type="submit">Login</button>
+    </form>
+    <div class="auth-links">
+        <p>Don't have an account? <a href="#" onclick="showSection('register-section')">Register</a></p>
+    </div>
+</div>
+       
+       
+</div>
+
+        <!-- Register Section -->
+         <div id="register-section" style="display: none;" class="auth-card">
+    <div class="form-header">
+        <h2>Create New Account</h2>
+    </div>
+    <form id="register-form" class="auth-form">
+        <input type="text" name="username" placeholder="Username" required>
+        
+        <input type="password" name="password" placeholder="Password" required>
+         
+        
+    
+        <button type="submit">Register</button>
+    </form>
+    <div class="auth-links">
+        <p>Already have an account? <a href="#" onclick="showSection('auth-section')">Login</a></p>
+    </div>
+</div>
+        
+
+        <!-- Topic Selection Section -->
+        <!-- Topic Selection Section -->
+<div id="topic-section" style="display: none;">
+    <div class="topic-header">
+        <h2>Select Quiz Topic</h2>
+    </div>
+    <div class="topic-list">
+        <button class="topic-btn" onclick="startQuiz('Math')">Mathematics</button>
+        <button class="topic-btn" onclick="startQuiz('python')">Python Programming</button>
+        <button class="topic-btn" onclick="startQuiz('c programming')">C Programming</button>
+        <button class="topic-btn" onclick="startQuiz('data structures')">Data Structures</button>
+        <button class="topic-btn" onclick="startQuiz('html')">HTML</button>
+        <button class="topic-btn" onclick="startQuiz('java')">Java Programming</button>
+    </div>
+    <button class="back-btn" onclick="logout()">Logout</button>
+    
+</div>
+        <!-- Quiz Section -->
+        <div id="quiz-section" style="display: none;">
+            <h2 id="quiz-title"></h2>
+            <div id="timer">Time Left: <span id="time">5:00</span> </div>
+            <div id="question"></div>
+            <div id="options"></div>
+            <button id="next-btn" onclick="nextQuestion()" style="display: none;">Next</button>
+            <button id="submit-btn" onclick="submitQuiz()" style="display: none;">Submit Quiz</button>
+        </div>
+
+        <!-- Result Section -->
+        <div id="result-section" style="display: none;">
+        <div id="score"></div>
+        <div class="auth-links">
+        
+        <div id="scores-display"></div>
+
+        
+           
+          
+            
+            
+        </div>
+
+        <!-- Add Question Section -->
+        <div id="add-question-section" style="display: none;">
+            <h2>Add New Question</h2>
+            <form id="add-question-form">
+                <input type="text" name="question" placeholder="Question" required>
+                <input type="text" name="option1" placeholder="Option 1" required>
+                <input type="text" name="option2" placeholder="Option 2" required>
+                <input type="text" name="option3" placeholder="Option 3" required>
+                <input type="text" name="option4" placeholder="Option 4" required>
+                <select name="correct_option" required>
+                    <option value="1">Option 1</option>
+                    <option value="2">Option 2</option>
+                    <option value="3">Option 3</option>
+                    <option value="4">Option 4</option>
+                </select>
+                <select name="topic" required>
+                    <option value="Math">Math</option>
+                    <option value="python">Python</option>
+                    <option value="c programming">C</option>
+                    <option value="java">Java</option>
+                    <option value="data structures">Data structures</option>
+                    <option value="html">HTML</option>
+                </select>
+                <button type="submit">Add Question</button>
+            </form>
+            <p class="back-link"><a href="#" onclick="showSection('auth-section')">Back to Home</a></p>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>

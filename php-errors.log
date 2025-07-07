@@ -1,0 +1,11 @@
+[06-Jul-2025 20:34:13 Europe/Berlin] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'is_admin' in 'field list' in C:\xampp\htdocs\quiz_app\register.php:93
+Stack trace:
+#0 C:\xampp\htdocs\quiz_app\register.php(93): mysqli->prepare('INSERT INTO use...')
+#1 {main}
+  thrown in C:\xampp\htdocs\quiz_app\register.php on line 93
+[06-Jul-2025 20:36:30 Europe/Berlin] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'is_admin' in 'field list' in C:\xampp\htdocs\quiz_app\register.php:93
+Stack trace:
+#0 C:\xampp\htdocs\quiz_app\register.php(93): mysqli->prepare('INSERT INTO use...')
+#1 {main}
+  thrown in C:\xampp\htdocs\quiz_app\register.php on line 93
+[06-Jul-2025 20:45:20 Europe/Berlin] Registration successful for user: tyuiop
